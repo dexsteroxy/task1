@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "../../public/assets/hero-background.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
