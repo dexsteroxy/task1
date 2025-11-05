@@ -126,7 +126,7 @@ const HomeHeroSection = () => {
 
       <div ref={contentRef} className="relative z-10 container mx-auto px-6">
         <div className="max-w-4xl">
-          <h1 className="text-2xl mt-4 md:mt-0 md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
             <span className="home-title-word inline-block text-foreground"> Building the Next Generation of  </span>
             <span className="home-title-word inline-block text-primary">Digital Startups</span>
           </h1>
