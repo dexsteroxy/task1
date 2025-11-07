@@ -294,54 +294,97 @@ const Navigation = () => {
           </button>
         </div>
 
-        {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 space-y-4">
-            <div className="space-y-2">
-              <div className="font-semibold text-sm">Industries</div>
-              {industriesMenu.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="block text-foreground/80 hover:text-foreground transition-colors pl-4"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-            <div className="space-y-2">
-              <div className="font-semibold text-sm">Clients</div>
-              {clientsMenu.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="block text-foreground/80 hover:text-foreground transition-colors pl-4"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-            <div className="space-y-2">
-              <div className="font-semibold text-sm">About</div>
-              {aboutMenu.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="block text-foreground/80 hover:text-foreground transition-colors pl-4"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-            <Link to="/estimate-project" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-background">
-                Estimate project →
-              </Button>
-            </Link>
-          </div>
-        )}
+  {isMobileMenuOpen && (
+  <div className="lg:hidden mt-4 pb-4 space-y-6">
+    {/* SERVICES */}
+    <div className="space-y-3">
+      <div className="font-semibold text-sm">Services</div>
+
+      <div>
+        <div className="text-xs uppercase text-muted-foreground pl-2 mb-1">
+          Software Development
+        </div>
+        {servicesMenu.softwareDevelopment.map((item) => (
+          <Link
+            key={item.name}
+            to={item.href}
+            className="block text-foreground/80 hover:text-foreground transition-colors pl-4 text-sm"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {item.name}
+          </Link>
+        ))}
+      </div>
+
+      <div className="pt-2">
+        <Link
+          to="#"
+          className="block text-primary text-sm underline pl-4"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          All services →
+        </Link>
+      </div>
+    </div>
+
+    {/* INDUSTRIES */}
+    <div className="space-y-2">
+      <div className="font-semibold text-sm">Industries</div>
+      {industriesMenu.map((item) => (
+        <Link
+          key={item.name}
+          to={item.href}
+          className="block text-foreground/80 hover:text-foreground transition-colors pl-4"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+
+    {/* CLIENTS */}
+    <div className="space-y-2">
+      <div className="font-semibold text-sm">Clients</div>
+      {clientsMenu.map((item) => (
+        <Link
+          key={item.name}
+          to={item.href}
+          className="block text-foreground/80 hover:text-foreground transition-colors pl-4"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+
+    {/* ABOUT */}
+    <div className="space-y-2">
+      <div className="font-semibold text-sm">About</div>
+      {aboutMenu.map((item) => (
+        <Link
+          key={item.name}
+          to={item.href}
+          className="block text-foreground/80 hover:text-foreground transition-colors pl-4"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+
+    {/* CTA Button */}
+    <Link to="/estimate-project" onClick={() => setIsMobileMenuOpen(false)}>
+      <Button
+        variant="outline"
+        className="w-full border-primary text-primary hover:bg-primary hover:text-background"
+      >
+        Estimate project →
+      </Button>
+    </Link>
+  </div>
+)}
+
+
       </div>
     </nav>
   );
