@@ -350,7 +350,7 @@ const CaseStudiesSection = () => {
       {/* Hero Text */}
       <div className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-light text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-center">
             Building smarter ecosystems for startups in B2B, and {" "}
             <span className="text-[#00D98A]">retail for the next digital era</span>
           </h2>
@@ -605,7 +605,7 @@ loyalty. <span className="text-[#00D98A] font-semibold">ecosystems that power re
 
           <Link to="/estimate-project">
           <Button className="bg-[#00D98A] hover:bg-[#00C17D] text-black font-semibold px-8 py-6 text-lg mt-8">
-            Estimate project <ArrowRight className="ml-2 w-5 h-5" />
+            Book a Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
           </Link>
         </div>
