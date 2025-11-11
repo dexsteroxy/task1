@@ -119,7 +119,7 @@ const Navigation = () => {
                           </ul>
                         </div>
                         <div>
-                          <h3 className="text-sm font-semibold text-foreground/60 mb-3 uppercase">Software Development</h3>
+                          <h3 className="text-sm font-semibold ml-32 text-foreground/60 mb-3 uppercase">Software Development</h3>
                           <ul className="space-y-2">
                             {servicesMenu.softwareDevelopment.map((item) => (
                               <li key={item.name}>
@@ -298,12 +298,12 @@ const Navigation = () => {
   <div className="lg:hidden mt-4 pb-4 space-y-6">
     {/* SERVICES */}
     <div className="space-y-3">
-      <div className="font-semibold text-sm">Services</div>
+      <div className="font-semibold text-muted-foreground text-sm ml-4">Services</div>
 
       <div>
-        <div className="text-xs uppercase text-muted-foreground pl-2 mb-1">
+        {/* <div className="text-xs uppercase ml-[7px] text-muted-foreground pl-2 mb-1">
           Software Development
-        </div>
+        </div> */}
         {servicesMenu.softwareDevelopment.map((item) => (
           <Link
             key={item.name}
@@ -319,7 +319,7 @@ const Navigation = () => {
       <div className="pt-2">
         <Link
           to="#"
-          className="block text-primary text-sm underline pl-4"
+          className="block text-primary ml-[2px] text-sm underline pl-4"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           All services →
@@ -329,7 +329,7 @@ const Navigation = () => {
 
     {/* INDUSTRIES */}
     <div className="space-y-2">
-      <div className="font-semibold text-sm">Industries</div>
+      <div className="font-semibold text-sm text-muted-foreground ml-4">Industries</div>
       {industriesMenu.map((item) => (
         <Link
           key={item.name}
@@ -344,7 +344,7 @@ const Navigation = () => {
 
     {/* CLIENTS */}
     <div className="space-y-2">
-      <div className="font-semibold text-sm">Clients</div>
+      <div className="font-semibold text-muted-foreground text-sm ml-4">Clients</div>
       {clientsMenu.map((item) => (
         <Link
           key={item.name}
@@ -359,7 +359,7 @@ const Navigation = () => {
 
     {/* ABOUT */}
     <div className="space-y-2">
-      <div className="font-semibold text-sm">About</div>
+      <div className="font-semibold text-muted-foreground text-sm ml-4">About</div>
       {aboutMenu.map((item) => (
         <Link
           key={item.name}
@@ -373,10 +373,10 @@ const Navigation = () => {
     </div>
 
     {/* CTA Button */}
-    <Link to="/estimate-project" onClick={() => setIsMobileMenuOpen(false)}>
+    <Link to="/estimate-project" className="" onClick={() => setIsMobileMenuOpen(false)}>
       <Button
         variant="outline"
-        className="w-full border-primary text-primary hover:bg-primary hover:text-background"
+        className="w-full border-primary text-primary mt-4 md:mt-0 hover:bg-primary hover:text-background"
       >
         Estimate project →
       </Button>
