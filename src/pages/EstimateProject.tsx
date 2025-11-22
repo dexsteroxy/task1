@@ -69,17 +69,7 @@ const EstimateProject = () => {
         </div>
       </section>
 
-      {/* Trusted By Section */}
-      <section className="py-8 border-y border-border">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="text-xl font-semibold">Keller Williams</div>
-            <div className="text-xl font-semibold">UBS</div>
-            <div className="text-xl font-semibold">Merck</div>
-            <div className="text-xl font-semibold">IKEA</div>
-          </div>
-        </div>
-      </section>
+   
 
       {/* Form Section */}
       <section className="py-20">

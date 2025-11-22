@@ -1,6 +1,72 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import heroimg from "@/../public/assets/heroimg.jpg"
+import HeroSection from "@/components/HeroSection";
+
+
+const HeroSectionWithImage = () => {
+  return (
+    // Main Container
+    <div className="relative min-h-screen w-full overflow-hidden flex items-center font-sans bg-[#020047]">
+      
+      {/* --- Background Image --- */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroimg} // <--- PUT YOUR IMAGE SOURCE HERE
+          alt="Hero Background" 
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Optional Overlay: If your image is too bright, uncomment the line below to add a dark tint so text remains readable */}
+        {/* <div className="absolute inset-0 bg-black/30 mix-blend-multiply"></div> */}
+      </div>
+
+
+      {/* --- Main Content --- */}
+      {/* z-10 ensures content sits on top of the background image */}
+      <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-20">
+        <div className="max-w-3xl">
+          
+          {/* Heading */}
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6 text-white">
+            <span className="text-[#22e05d]">Digital commerce experts</span>
+            <br />
+            with record-high NPS
+          </h1>
+
+          {/* Subtext */}
+          <p className="text-base md:text-lg text-gray-100 mb-10 leading-relaxed max-w-lg drop-shadow-sm">
+            We power digital commerce with AI-driven platforms,
+            <br className="hidden md:block" />
+            scalable marketplaces, and omnichannel experiences.
+          </p>
+
+          {/* CTA Button */}
+          <button className="group flex items-center gap-2 bg-[#22e05d] text-[#0a2a12] font-semibold py-3.5 px-6 rounded-md transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-105 active:scale-95 shadow-lg shadow-[#22e05d]/20">
+            Let's work together!
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="transition-transform duration-200 group-hover:translate-x-1"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 const AboutUs = () => {
   const values = [
@@ -25,6 +91,7 @@ const AboutUs = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
+      <HeroSectionWithImage/>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
