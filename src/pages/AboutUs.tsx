@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import wallpaper from "@/../public/assets/wall-paper.jpeg"
+import wallpaper from "/assets/wall-paper.jpeg"
 
 
 const HeroSectionWithImage = () => {

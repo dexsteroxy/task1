@@ -5,8 +5,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
-import heroBg from '../../public/assets/hero-background.jpg';
+import heroBg from '/assets/hero-background.jpg';
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -554,6 +555,7 @@ const Industry = () => {
           </section>
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };

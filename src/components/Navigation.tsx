@@ -303,8 +303,11 @@ const Navigation = () => {
 
                 {/* --- INSIGHTS --- */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-foreground/80 hover:text-foreground hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">
+                  <NavigationMenuTrigger className="bg-transparent text-white hover:text-green-400 focus:text-green-400 hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-green-400 font-medium text-base">
+                    
+                      <Link to="/insights">
                     Insights
+                   </Link>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[500px] p-6 bg-background border border-border">
