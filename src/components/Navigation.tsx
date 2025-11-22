@@ -10,6 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import builtlogo from "@/../public/assets/built-logo.png"
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -122,14 +123,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* LOGO */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-              <Link to={"/"}>
-                <span className="text-background font-bold text-xl">B</span>
-              </Link>
-            </div>
-            <Link to={"/"}>
-              <span className="text-xl font-bold text-foreground">BuiltIT Lab</span>
-            </Link>
+            <img src={builtlogo} className="w-32 h-auto" alt="logo"/>
+      
           </div>
 
           {/* DESKTOP NAVIGATION */}
