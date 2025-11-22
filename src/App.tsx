@@ -25,7 +25,7 @@ import SuperAppIntegration from "./pages/blog/SuperAppIntegration";
 import DataFoundationsAI from "./pages/blog/DataFoundationsAI";
 import EstimateProject from "./pages/EstimateProject";
 import NotFound from "./pages/NotFound";
-import Services from "./pages/services";
+import Services from "./pages/Services";
 import Industry from "./pages/Industry";
 
 const queryClient = new QueryClient();

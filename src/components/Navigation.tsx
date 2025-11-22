@@ -1,7 +1,7 @@
-import React from "react";
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   NavigationMenu,
@@ -142,7 +142,7 @@ const Navigation = () => {
                 <Link to="/services"> Services</Link>   
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className=" w-[800px] p-6 bg-background border border-border">
+                    <div className="!w-[100vw] !max-w-[100vw] !left-0 bg-[#1C2432] border-t p-6 border-gray-800">
                       <div className="grid w-full grid-cols-3 gap-6">
                         <div>
                           <h3 className="text-sm font-semibold text-foreground/60 mb-3 uppercase">Ideation</h3>

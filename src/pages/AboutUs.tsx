@@ -1,8 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import heroimg from "@/../public/assets/heroimg.jpg"
-import HeroSection from "@/components/HeroSection";
+import wallpaper from "@/../public/assets/wall-paper.jpeg"
 
 
 const HeroSectionWithImage = () => {
@@ -13,7 +12,7 @@ const HeroSectionWithImage = () => {
       {/* --- Background Image --- */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroimg} // <--- PUT YOUR IMAGE SOURCE HERE
+          src={wallpaper} // <--- PUT YOUR IMAGE SOURCE HERE
           alt="Hero Background" 
           className="w-full h-full object-cover object-center"
         />
