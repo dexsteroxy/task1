@@ -141,108 +141,42 @@ const Navigation = () => {
                   <NavigationMenuTrigger className="bg-transparent text-white hover:text-green-400 focus:text-green-400 hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-green-400 font-medium text-base">
                 <Link to="/services"> Services</Link>   
                   </NavigationMenuTrigger>
-
-                  {/* CRITICAL FIX 3:
-                 !w-[100vw] forces width.
-                 !left-0 forces it to start at left edge of window (because parent is static).
-              */}
-                  <NavigationMenuContent className="!w-[100vw] !max-w-[100vw] !left-0 bg-[#1C2432] border-t border-gray-800">
-                    {/* Inner Container restricts content to standard grid width */}
-                    <div className="container mx-auto px-6 py-10">
-                      <div className="grid grid-cols-4 gap-12">
-                        {/* COLUMN 1: IDEATION & GEN AI */}
-                        <div className="flex flex-col gap-8">
-                          <div>
-                            <h3 className="text-xs font-bold tracking-widest text-gray-400 mb-6 uppercase">
-                              Ideation
-                            </h3>
-                            <ul className="space-y-4">
-                              {[
-                                "Rapid Prototyping",
-                                "Research & Development",
-                                "User Research & Testing",
-                                "Product Strategy",
-                              ].map((item) => (
-                                <li key={item}>
-                                  <Link
-                                    to="#"
-                                    className="text-gray-300 hover:text-green-400 transition-colors text-sm font-medium block"
-                                  >
-                                    {item}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div>
-                            <h3 className="text-xs font-bold tracking-widest text-gray-400 mb-6 uppercase">
-                              Generative AI and Data
-                            </h3>
-                            <ul className="space-y-4">
-                              {[
-                                "AI Development",
-                                "AI Agent Development",
-                                "Machine Learning",
-                                "Data Engineering",
-                              ].map((item) => (
-                                <li key={item}>
-                                  <Link
-                                    to="#"
-                                    className="text-gray-300 hover:text-green-400 transition-colors text-sm font-medium block"
-                                  >
-                                    {item}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                  <NavigationMenuContent>
+                    <div className=" w-[800px] p-6 bg-background border border-border">
+                      <div className="grid w-full grid-cols-3 gap-6">
+                        <div>
+                          <h3 className="text-sm font-semibold text-foreground/60 mb-3 uppercase">Ideation</h3>
+                          <ul className="space-y-2">
+                            {servicesMenu.ideation.map((item) => (
+                              <li key={item.name}>
+                                <Link to={item.href} className="text-foreground/80 hover:text-primary transition-colors text-sm">
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
-
-                        {/* COLUMN 2: SOFTWARE DEV & MAINTENANCE */}
-                        <div className="flex flex-col gap-8">
-                          <div>
-                            <h3 className="text-xs font-bold tracking-widest text-gray-400 mb-6 uppercase">
-                              Software Development
-                            </h3>
-                            <ul className="space-y-4">
-                              {[
-                                "Web Development",
-                                "Mobile Development",
-                                "MVPs",
-                                "Cloud Strategy",
-                              ].map((item) => (
-                                <li key={item}>
-                                  <Link
-                                    to="#"
-                                    className="text-gray-300 hover:text-green-400 transition-colors text-sm font-medium block"
-                                  >
-                                    {item}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div>
-                            <h3 className="text-xs font-bold tracking-widest text-gray-400 mb-6 uppercase">
-                              Maintenance
-                            </h3>
-                            <ul className="space-y-4">
-                              {[
-                                "Quality Assurance",
-                                "Product Management",
-                                "Software Maintenance Services",
-                              ].map((item) => (
-                                <li key={item}>
-                                  <Link
-                                    to="#"
-                                    className="text-gray-300 hover:text-green-400 transition-colors text-sm font-medium block"
-                                  >
-                                    {item}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                        <div>
+                          <h3 className="text-sm font-semibold ml-32 md:ml-0 text-foreground/60 mb-3 uppercase">Software Development</h3>
+                          <ul className="space-y-2">
+                            {servicesMenu.softwareDevelopment.map((item) => (
+                              <li key={item.name}>
+                                <Link to={item.href} className="text-foreground/80 hover:text-primary transition-colors text-sm">
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                          <h3 className="text-sm font-semibold text-foreground/60 mb-3 mt-6 uppercase">Maintenance</h3>
+                          <ul className="space-y-2">
+                            {servicesMenu.maintenance.map((item) => (
+                              <li key={item.name}>
+                                <Link to={item.href} className="text-foreground/80 hover:text-primary transition-colors text-sm">
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
 
                         {/* COLUMN 3: DESIGN & COOPERATION */}

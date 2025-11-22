@@ -25,6 +25,8 @@ import SuperAppIntegration from "./pages/blog/SuperAppIntegration";
 import DataFoundationsAI from "./pages/blog/DataFoundationsAI";
 import EstimateProject from "./pages/EstimateProject";
 import NotFound from "./pages/NotFound";
+import Services from "./pages/services";
+import Industry from "./pages/Industry";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +58,9 @@ const App = () => (
           <Route path="/blog/superapp-integration" element={<SuperAppIntegration />} />
           <Route path="/blog/data-foundations-ai" element={<DataFoundationsAI />} />
           <Route path="/estimate-project" element={<EstimateProject />} />
+             <Route path="/services" element={<Services />} />
+
+               <Route path="/industries" element={<Industry />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
