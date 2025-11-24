@@ -7,11 +7,11 @@ import Footer from "@/components/Footer";
 const Home = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      {/* <Navigation /> */}
       <HomeHeroSection />
-      <CaseStudiesSection />
+      {/* <CaseStudiesSection /> */}
       {/* <CTASection /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
